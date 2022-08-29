@@ -1,7 +1,3 @@
-
-
-
-
 let items = [...document.querySelectorAll('.item-inner')];
 const slider = document.querySelector('.inner-slider');
 const sliderParent = slider.parentElement;
@@ -52,3 +48,5 @@ function animate(){
 } 
 
 animate()
+
+
