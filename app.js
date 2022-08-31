@@ -91,7 +91,7 @@ items.forEach((item, index) => {
         root.style.setProperty('--clicked_width', myheight + 'px');
         root.style.setProperty('--clicked_y', mytop + 'px');
         root.style.setProperty('--clicked_x', myleft + 'px');
-
+        let target_link = item.getAttribute('data-link');
         is_stopping = true;
         animate();
 
@@ -104,9 +104,10 @@ items.forEach((item, index) => {
             left: 0,
             delay: 0,
             width: '100vw',
+            height: '70vh',
             duration: 2,
             ease: "power4",
-            immediateRender : true,
+            immediateRender: true,
         }, 0)
 
         tl.to('.main', {
@@ -114,6 +115,9 @@ items.forEach((item, index) => {
             y: 3500,
             duration: 4
         }, 0)
+        setTimeout(() => {
+
+            window.location.href = target_link
+        }, 3000);
     });
 });
-

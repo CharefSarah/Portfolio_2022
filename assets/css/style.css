@@ -19,7 +19,7 @@ body {
 :root {
   --clr-bg: #DCDCDC;
   --clr-accent: #151515;
-  --clr-accent-2: #3305ff;
+  --clr-accent-2: #1c1b1b;
   --clr-spacer-1: 3rem;
   --size_font: 18px;
   --spacer_0: 5px;
@@ -94,12 +94,22 @@ a>span:after {
   transform: scaleX(1);
 }
 
+.projet1 h1{
+  color: var(--clr-bg);
+}
+
+.projet1 .accent_mighty_font{
+  color: var(--clr-bg);
+}
+
 h1 {
   font-family: "Gayathri";
   text-align: center;
   font-size: 35px;
   line-height: 18px;
   color: var(--clr-accent-2);
+
+  
 
 }
 
@@ -124,8 +134,8 @@ nav {
   align-items: center;
   position: absolute;
   top: 0;
-  z-index: 9999999;
-  
+  z-index: 0;
+
 }
 
 
@@ -146,13 +156,13 @@ main {
 
 .slider {
   position: absolute;
-  top: 3%;
+  top: 2.5%;
   left: 0%;
   width: 100vw;
   height: 100%;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  z-index: 9999;
+  z-index: 9999999;
 
 
 }
@@ -176,6 +186,7 @@ main {
   width: 4400px;
   height: 100%;
   will-change: transform;
+  z-index: 4;
 
 }
 
@@ -185,11 +196,12 @@ main {
   height: 75vh;
   overflow: hidden;
   transition: transform .5s ease;
-  filter: grayscale(100%);
+  filter: grayscale(100%) contrast(95%) brightness(65%);
+  z-index: 6;
 }
 .item:hover {
   transition: all .5s ease;
-  filter:contrast(95%);
+  filter:contrast(95%)  brightness(85%);
 }
 
 .item-inner {
@@ -254,5 +266,33 @@ main {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
+}
+
+.top_bg {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+.top_bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.vd_bg{
+  background-image: url('../images/VoodooBurger/1.jpg');
+}
+
+.wokeasy_Bg{
+  background-image: url('../images/wokeasy/2.jpg');
+  
 }
 
