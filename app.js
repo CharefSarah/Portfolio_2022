@@ -1,52 +1,63 @@
-const tl1 = gsap.timeline();
+let tl1 = gsap.timeline();
 
-tl1.from(".line .title__2", 1.8, {
-  y: 80,
-  ease: "power3.out",
-  opacity: 0,
-  delay: 0.5,
-  skewY: 0,
+
+tl1.from(".line .title__2", 0.8, {
+    y: 80,
+    ease: "power3.out",
+    opacity: 0,
+    delay: 0.5,
 }, 0)
-  tl1.from(".line .title__1", 1.8, {
-    y: 50,
+tl1.from(".line .title__1", 0.8, {
+    y: 90,
     ease: "power4.out",
     opacity: 0,
-    skewY: 0,
-  }, 0)
-  tl1.from(".line .elem__quote__1", 1, {
+}, 0)
+tl1.from(".line .elem__quote__1", 0.5, {
     y: -40,
     ease: "power4.out",
     opacity: 0,
-    skewY: 0,
-  }, 2)
-    tl1.from(".line .elem__quote__2", 1, {
-      y: -20,
-      ease: "power4.out",
-      opacity: 0,
-      skewY: 0,
-}, 3)
-tl1.from(".line .link__1", 0.5, {
-    y: -10,
-    ease: "power4.out",
-    opacity: 0,
-    skewY: 0,
-}, 4)
-tl1.from(".line .link__2", 0.5, {
+}, 2)
+tl1.from(".line .elem__quote__2", 0.5, {
     y: -20,
     ease: "power4.out",
     opacity: 0,
-    skewY: 0,
+}, 3)
+tl1.from(".line .link__1", 0.25, {
+    y: -10,
+    ease: "power4.out",
+    opacity: 0,
+}, 4)
+tl1.from(".line .link__2", 0.25, {
+    y: -20,
+    ease: "power4.out",
+    opacity: 0,
 }, 5)
-tl1.from(".line .scroll__btn", 1.8, {
+tl1.from(".line .scroll__btn", 0.8, {
     y: 10,
     ease: "power4.out",
     opacity: 0,
-    skewY: 0,
+    skewY: 10,
 }, 6)
 
 
-let items = [...document.querySelectorAll('.item-inner')];
-const slider = document.querySelector('.inner-slider');
+let tl2 = gsap.timeline();
+
+tl1.from(".title__1", 0.8, {
+    y: -800,
+    ease: "power3.out",
+    delay: 0.5,
+}, 0)
+tl2.from(" .elem__slider", 0.8, {
+    y: 800 ,
+    ease: "power3.out",
+    opacity: 0,
+    zindex: 9999,
+}, 0)
+
+
+
+let items = [...document.querySelectorAll('.item__inner')];
+const slider = document.querySelector('.elem__inner__slider');
 const sliderParent = slider.parentElement;
 items.forEach((item, idx) => {
     item.style.backgroundImage = `url(./images/${idx + 1}.jpg)`
@@ -92,7 +103,7 @@ if (isMobile) {
 
 }
 
-items = [...document.querySelectorAll('.item-inner')]
+items = [...document.querySelectorAll('.item__inner')]
 
 let is_stopping = false;
 
