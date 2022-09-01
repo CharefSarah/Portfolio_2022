@@ -8,41 +8,50 @@
 html,
 body {
 
-  background: var(--clr-bg);
-  color: var(--clr-accent);
+  background: var(--clr_bg);
+  color: var(--clr_font);
   font-family: "Mabry";
   font-weight: 400;
+  overflow: hidden;
+  list-style: none;
+
+
 }
 
 
-
 :root {
-  --clr-bg: #DCDCDC;
-  --clr-accent: #151515;
-  --clr-accent-2: #1c1b1b;
+  --clr_bg: #dcdcdc;
+  --clr_font: #111111;
+  --clr_font_light: #5d5d5d;
+  --clr_font_accent: #04fff2;
   --clr-spacer-1: 3rem;
-  --size_font: 18px;
-  --spacer_0: 5px;
-  --spacer_1: 20px;
-  --spacer_2: 40px;
-  --spacer_3: 60px;
+  --size_font: 16px;
+  --size_font_title: 130px;
   --clicked_top: 100px;
   --clicked_left: 100px;
   --clicked_height: 100px;
   --clicked_width: 100px;
+  --hidden: 'none';
+
 }
 
 
 @font-face {
-  font-family: "Mabry";
-  src: url("../fonts/mabry-regular-pro.ttf") format("TrueType");
+  font-family: 'Mabry';
+  src: url("../fonts/mabry-regular-pro.ttf") format('TrueType');
 
 }
 
 @font-face {
-  font-family: "Gayathri";
-  src: url("../fonts/fonts/Gayathri-Bold.ttf") format("OpenType");
+  font-family: 'Gayathri';
+  src: url("../fonts/fonts/Gayathri-Bold.ttf") format('OpenType');
 
+}
+
+
+::selection {
+  color: var(--clr_bg);
+  background: var(--clr_font_light);
 }
 
 
@@ -65,6 +74,7 @@ a>span {
   color: inherit;
   text-decoration: none;
   line-height: 20px;
+
 }
 
 a:before,
@@ -76,223 +86,99 @@ a>span:after {
   transition: transform .5s ease;
 }
 
-.hover-1 {
+.hover__1 {
   padding-top: 10px;
 
 }
 
-.hover-1:before {
+.hover__1:before {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 1.3px;
-  background: var(--clr-accent-2);
+  background: var(--clr_font);
   transform: scaleX(0);
 }
 
-.hover-1:hover:before {
+.hover__1:hover:before {
   transform: scaleX(1);
 }
 
-.projet1 h1{
-  color: var(--clr-bg);
-}
-
-.projet1 .accent_mighty_font{
-  color: var(--clr-bg);
-}
-
 h1 {
-  font-family: "Gayathri";
+  color: var(--clr_font);
+  font-size: var(--size_font_title);
+  text-transform: uppercase;
   text-align: center;
-  font-size: 35px;
-  line-height: 18px;
-  color: var(--clr-accent-2);
-
-  
-
-}
-
-h3 {
   width: 100%;
-  text-align: left;
-  line-height: 25px;
-  font-weight: 400;
-  font-size: 16px;
-
-
 }
 
-nav {
-  height: 12%;
+h2,
+p {
+  text-transform: uppercase;
   width: 100%;
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align:center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  z-index: 0;
-
+}
+h3{
+  font-size: var(--size_font);
+  font-weight: 500;
 }
 
-
-.accent_mighty_font {
-  font-family: "Gayathri";
-  color: var(--clr-accent-2);
+.elem__title h1{
+  opacity: 0;
 }
 
-
-main {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
+.title__1{
+  margin-top: 25vh;
 }
 
-.slider {
-  position: absolute;
-  top: 2.5%;
-  left: 0%;
-  width: 100vw;
-  height: 100%;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  z-index: 9999999;
-
-
+.elem__quote {
+  font-size: var(--size_font);
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--clr_font_light);
 }
-
-
-.slider::-webkit-scrollbar {
-  display: none !important;
+.elem__quote h2 , .item__link h3, .scroll__btn h3 {
+  opacity: 0;
 }
-*::-webkit-scrollbar {
-  display: none !important;
-}
-
-
-.inner-slider {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 4400px;
-  height: 100%;
-  will-change: transform;
-  z-index: 4;
-
-}
-
-.item {
-  position: relative;
-  width: 22vw;
-  height: 75vh;
-  overflow: hidden;
-  transition: transform .5s ease;
-  filter: grayscale(100%) contrast(95%) brightness(65%);
-  z-index: 6;
-}
-.item:hover {
-  transition: all .5s ease;
-  filter:contrast(95%)  brightness(85%);
-}
-
-.item-inner {
-  position: absolute;
-  left: -50%;
-  top: 0%;
-  width: 200%;
-  height: calc(100% - 30px);
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
-
-}
-
-
-.header_row_infos {
-  width: 100%;
-  height: 15%;
-  padding-top: 2rem;
-  padding-inline: 1.8rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.elem__footer__container {
   position: absolute;
   bottom: 0;
-  z-index: 9999999;
-}
-
-.infos_items {
-  width: 33.3%;
-
-}
-
-.header_infos_col {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-
-.header_infos_row {
+  width: 100%;
+  height: 20vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding-inline: 5%;
 
 }
 
-.header_infos_row h3 {
-  width: 100%;
-  text-align: center;
-}
-
-.header_infos_col p {
-  margin-bottom: 0.5rem;
-
-}
-
-.infos_col3 {
+.elem__footer {
+  height: 100%;
+  width: 33.3%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  line-height: 24px;
+
+}
+
+.elem__footer_1 {
+  align-items: left;
+
+}
+
+.elem__footer__2 {
+  align-items: center;
+  text-align: center;
+ color: var(--clr_font_light);
+
+}
+
+
+.elem__footer__3 {
   align-items: flex-end;
   text-align: right;
-}
+ color: transparent;
 
-.top_bg {
-  width: 100vw;
-  height: 70vh;
-  position: relative;
-  background-size: cover;
-  background-position: center center;
 }
-
-.top_bg:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70vh;
-  background-size: cover;
-  background-position: center center;
-}
-
-.vd_bg{
-  background-image: url('../images/VoodooBurger/1.jpg');
-}
-
-.wokeasy_Bg{
-  background-image: url('../images/wokeasy/2.jpg');
-  
-}
-

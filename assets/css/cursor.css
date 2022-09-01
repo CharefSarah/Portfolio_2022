@@ -163,8 +163,8 @@
             transform: scale(0); }
 
 
-.-color-accent-green {
-  color: #1c0097; }
+.color__accent{
+  color: #0d14cf; }
 
 .-color-red {
   background: #8d53e9; }
@@ -247,7 +247,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 150;
+  z-index: 999999999;
   contain: layout style size;
   pointer-events: none;
   will-change: transform;

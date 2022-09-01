@@ -1,3 +1,50 @@
+const tl1 = gsap.timeline();
+
+tl1.from(".line .title__2", 1.8, {
+  y: 80,
+  ease: "power3.out",
+  opacity: 0,
+  delay: 0.5,
+  skewY: 0,
+}, 0)
+  tl1.from(".line .title__1", 1.8, {
+    y: 50,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 0,
+  }, 0)
+  tl1.from(".line .elem__quote__1", 1, {
+    y: -40,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 0,
+  }, 2)
+    tl1.from(".line .elem__quote__2", 1, {
+      y: -20,
+      ease: "power4.out",
+      opacity: 0,
+      skewY: 0,
+}, 3)
+tl1.from(".line .link__1", 0.5, {
+    y: -10,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 0,
+}, 4)
+tl1.from(".line .link__2", 0.5, {
+    y: -20,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 0,
+}, 5)
+tl1.from(".line .scroll__btn", 1.8, {
+    y: 10,
+    ease: "power4.out",
+    opacity: 0,
+    skewY: 0,
+}, 6)
+
+
 let items = [...document.querySelectorAll('.item-inner')];
 const slider = document.querySelector('.inner-slider');
 const sliderParent = slider.parentElement;
