@@ -97,7 +97,7 @@ document.addEventListener('wheel', function () {
         done = true;
         document.querySelector('.elem__inner__slider').style.pointerEvents = 'auto';
         document.querySelector('.elem__slider').setAttribute('data-cursor-text', 'SCROLL');
-
+        document.querySelector('.elem__slider').style.pointerEvents = 'auto';
     }
 })
 
@@ -226,22 +226,61 @@ items.forEach((item, index) => {
         }, 3000);
     });
 });
+petitnomsympa = document.querySelector('.petit__nom__sympa');
 
-  petitnomsympa = document.querySelector('.petit__nom__sympa');
+document.addEventListener('mousemove', function (e) {
+    petitnomsympa.style.top = e.pageY + "px";
+    petitnomsympa.style.left = e.pageX + "px";
+});
 
-        document.addEventListener('mousemove', function (e) {
-            petitnomsympa.style.top = e.pageY + "px";
-            petitnomsympa.style.left = e.pageX + "px";
-        });
+document.querySelector('.image__span__1').addEventListener('mouseover', function () {
+    petitnomsympa.style.backgroundImage = "url('/assets/images/titres/rose.png')";
+    petitnomsympa.style.height = '25vh';
+    petitnomsympa.style.width = '15vw';
 
-        document.querySelector('.elem__title title__1').addEventListener('mouseover', function () {
-            petitnomsympa.style.backgroundImage = "url('/assets/images/spooky/spooky_cover.jpg')";
-            petitnomsympa.style.height = '15vh';
-            petitnomsympa.style.width = '15vh';
-        });
+});
 
-        document.querySelector('.elem__title title__1').addEventListener('mouseout', function () {
-            petitnomsympa.style.backgroundImage = "url('')";
-            petitnomsympa.style.height = '0';
-            petitnomsympa.style.width = '0';
-        });
+document.querySelector('.image__span__1').addEventListener('mouseout', function () {
+    petitnomsympa.style.backgroundImage = "url('')";
+    petitnomsympa.style.height = '0';
+    petitnomsympa.style.width = '0';
+});
+
+document.querySelector('.image__span__2').addEventListener('mouseover', function () {
+    petitnomsympa.style.backgroundImage = "url('/assets/images/titres/silkykiss.png')";
+    petitnomsympa.style.height = '30vh';
+    petitnomsympa.style.width = '15vw';
+
+});
+
+document.querySelector('.image__span__2').addEventListener('mouseout', function () {
+    petitnomsympa.style.backgroundImage = "url('')";
+    petitnomsympa.style.height = '0';
+    petitnomsympa.style.width = '0';
+});
+
+document.querySelector('.image__span__3').addEventListener('mouseover', function () {
+    petitnomsympa.style.backgroundImage = "url('/assets/images/titres/lol.png')";
+    petitnomsympa.style.height = '15vh';
+    petitnomsympa.style.width = '30vw';
+
+});
+
+document.querySelector('.image__span__3').addEventListener('mouseout', function () {
+    petitnomsympa.style.backgroundImage = "url('')";
+    petitnomsympa.style.height = '0';
+    petitnomsympa.style.width = '0';
+});
+
+document.querySelector('.image__span__4').addEventListener('mouseover', function () {
+    petitnomsympa.style.backgroundImage = "url('/assets/images/georama+/insta1.png')";
+    petitnomsympa.style.height = '25vh';
+    petitnomsympa.style.width = '15vw';
+
+});
+
+document.querySelector('.image__span__4').addEventListener('mouseout', function () {
+    petitnomsympa.style.backgroundImage = "url('')";
+    petitnomsympa.style.height = '0';
+    petitnomsympa.style.width = '0';
+});

@@ -291,6 +291,10 @@ h3 {
 .gplus__bg {
   background-image: url('../images/georama+/5.jpg');
 }
+.spooky__bg{
+  background-image: url('../images/spooky/spooky_cover.jpg');
+}
+
 
 .projet__presentation__titles {
   height: 25vh;
@@ -389,11 +393,16 @@ h3 {
 .transi1{
   width: 100%;
 }
-.petit__nom__sympa{
+
+.elem__slider {
+  pointer-events: none;
+}
+
+.petit__nom__sympa {
   position: absolute;
-  width: 15vh;
-  height: 15vh;
-  background-color: red;
-  opacity: 95%;
   z-index: 9999;
+  background-size: cover;
+  background-position: center center;
+  pointer-events: none;
+
 }
