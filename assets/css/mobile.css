@@ -1,0 +1,83 @@
+@media screen and (max-width: 425px) {
+
+    :root {
+        --clr_bg: #dcdcdc;
+        --clr_font: #111111;
+        --clr_font_light: #5d5d5d;
+        --clr_font_accent: #42DFB0;
+        --clr-spacer-1: 3rem;
+        --size_font: 14px;
+        --size_font_title: 35px;
+        --clicked_top: 100px;
+        --clicked_left: 100px;
+        --clicked_height: 100px;
+        --clicked_width: 100px;
+        --hidden: 'none';
+
+    }
+
+    .title__2 {
+        margin-bottom: 3rem;
+    }
+
+    h4 {
+        font-size: var(--size_font);
+    }
+
+
+
+    .elem__slider {
+        position: absolute;
+        top: 20%;
+        left: 0%;
+        width: 100vw;
+        height: 65vh !important;
+
+    }
+
+    .elem__inner__slider {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 1000% !important;
+        height: 100%;
+        will-change: transform;
+        z-index: 4;
+        pointer-events: none;
+  
+
+    }
+
+    .elem__item {
+        position: relative;
+        width: 65vw;
+        height: 45vh;
+        overflow: hidden;
+        transition: transform .5s ease;
+        filter: contrast(95%) !important;
+
+    }
+
+
+
+    .item__inner {
+        position: absolute;
+        left: -50%;
+        top: 0%;
+        width: 200%;
+        height: calc(100% - 60px);
+        background-size: cover;
+        background-position: center;
+        will-change: transform;
+
+
+    }
+    .elem__item:nth-child(even)
+{     
+  height: 65vh;
+}
+
+}

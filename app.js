@@ -88,11 +88,7 @@ document.addEventListener('wheel', function () {
             ease: "power3.out",
             opacity: 0,
         }, 2)
-        tl2.to(".projet__btn", 2, {
-            y: 10,
-            ease: "power3.out",
-            opacity: 1,
-        }, 2)
+  
 
         done = true;
         document.querySelector('.elem__inner__slider').style.pointerEvents = 'auto';
@@ -134,7 +130,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 }
 
 if (isMobile) {
-    sliderParent.style.height = '80%'
+    sliderParent.style.height = '100%'
     sliderParent.style.overflow = 'scroll'
     let {
         width
