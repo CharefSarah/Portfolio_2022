@@ -16,6 +16,10 @@
 
     }
 
+    body {
+        overflow: hidden;
+    }
+
     .title__2 {
         margin-bottom: 3rem;
     }
@@ -47,7 +51,7 @@
         will-change: transform;
         z-index: 4;
         pointer-events: none;
-  
+
 
     }
 
@@ -75,9 +79,9 @@
 
 
     }
-    .elem__item:nth-child(even)
-{     
-  height: 65vh;
-}
+
+    .elem__item:nth-child(even) {
+        height: 65vh;
+    }
 
 }
