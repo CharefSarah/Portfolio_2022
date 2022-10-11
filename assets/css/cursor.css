@@ -63,7 +63,7 @@
             transform: scale(0) rotate(10deg);
     opacity: 0;
     color: white;
-    font-size: 16px;
+    font-size: 10px;
     line-height: 20px;
     text-align: center;
     letter-spacing: -0.01em;
@@ -164,7 +164,21 @@
 
 
 .color__accent{
-  color: #42DFB0; }
+  color: #9850FF; }
+
+  .color__accent__mn{
+    color: #A08EF1 }
+    .color__learning{
+      color: #4D636E}
+    
+        .color__shoes{
+          color: #1F0EE2; }
+          .color__env{
+            color: #2C2C2C; }
+            .color__bubu{
+              color: #FDAE23;
+            }
+      
 
 .color__white {
  color: #dcdcdc; }
@@ -230,14 +244,14 @@
     .ht-demo-item-title {
       position: relative;
       margin: 0 0 25px 0;
-      font-size: 30px;
+      font-size: 12px;
       font-weight: bold; }
     .ht-demo-item-text {
       position: relative;
       max-width: 70%;
       margin: 0 auto;
       color: rgba(0, 0, 0, 0.5);
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 300;
       line-height: 150%; }
 
@@ -280,8 +294,8 @@
   transform: scale(0) rotate(10deg);
   opacity: 0;
   color: white;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
   letter-spacing: -0.01em;
   transition: opacity 0.4s, transform 0.3s;

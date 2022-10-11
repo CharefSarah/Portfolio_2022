@@ -1,4 +1,7 @@
-/******/ (function(modules) { // webpackBootstrap
+
+ if (window.screen.width >= 1081) { 
+
+(function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -16436,4 +16439,5 @@
     /***/ })
     
     /******/ });
-  
+    }
+
